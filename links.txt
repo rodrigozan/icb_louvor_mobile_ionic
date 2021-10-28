@@ -1,0 +1,27 @@
+Components
+
+Ionic tabs - https://www.freakyjolly.com/ionic-4-how-to-add-tabs-bar-and-create-tab-navigation-in-ionic-4-application/
+
+Plugins
+
+Install Plugins - https://ionicframework.com/docs/cli/commands/cordova-plugin
+
+In App Browser: 
+ionic cordova plugin add cordova-plugin-inappbrowser --save
+npm install --save @ionic-native/in-app-browser 
+https://www.techiediaries.com/inappbrowser-ionic-v3/
+
+Color generator
+https://ionicframework.com/docs/theming/color-generator
+
+Incluir Shema no componets.module.ts para que o erro de componentes do próprio Ionic não sejam reconhecidos pelo renderizador
+https://stackoverflow.com/questions/51544863/ionic-button-showing-ion-button-is-not-a-known-element
+
+ngIf 
+https://stackoverflow.com/questions/48408470/using-ngif-in-ionic-3
+
+ngClass
+https://stackoverflow.com/questions/40002473/assign-style-with-ngif-evaluation-in-angular2
+
+Mixins - SASS 
+https://www.devschannel.com/sass/funcoes-e-mixins-do-sass

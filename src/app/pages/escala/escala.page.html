@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col col-4>
+          <h4>ICB Louvor</h4>
+        </ion-col>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="../../../assets/img/rod.jpg">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+
+    <ion-grid>
+      <img src="../../../assets/img/escala.jpg">
+
+      <ion-row id="dia">
+        <ion-col (click)="escalaSexta()" [ngClass]="{'bg' : bgSexta == true }">
+          <p>Sexta</p>
+        </ion-col>
+        <ion-col (click)="escalaDomingo()" [ngClass]="{'bg' : bgDomingo == true }">
+          <p>Domingo</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="showSexta == true">
+      <div class="escalas" *ngFor="let e of sexta">
+        <h3>Escala do dia {{ e.data }}</h3>
+        <ion-row>
+          <ion-col style="border-top: solid 1px #999999;" class="instrumento">
+            <ion-label>Ministro</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ e.ministro }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Violão</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ e.violao }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Backs</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ e.backs }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-bottom: solid 1px #999999;">
+          <ion-col class="instrumento">
+            <ion-label>Teclado</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ e.teclado }}</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+
+    <ion-grid *ngIf="showDomingo == true">
+      <div class="escalas" *ngFor="let d of domingo"> 
+        <h3>Escala do dia {{ d.data }}</h3>
+        <ion-row>
+          <ion-col style="border-top: solid 1px #999999;" class="instrumento">
+            <ion-label>Ministro</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.ministro }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Violão</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.violao }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Backs</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.backs }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Teclado</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.teclado }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Baixo</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.baixo }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="instrumento">
+            <ion-label>Guitarra</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.guitarra }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-bottom: solid 1px #999999;">
+          <ion-col class="instrumento">
+            <ion-label>Bateria</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>{{ d.bateria }}</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+
+  </div>
+</ion-content>

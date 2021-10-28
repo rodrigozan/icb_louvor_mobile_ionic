@@ -1,0 +1,151 @@
+@import 'colours';
+
+ion-menu {
+  ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  }
+}
+
+ion-menu.md {
+  ion-content {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-list {
+    padding: 20px 0;
+  }
+
+  ion-note {
+    margin-bottom: 30px;
+  }
+
+  ion-list-header, ion-note { 
+    padding-left: 10px;
+  }
+
+  ion-list#inbox-list {
+    border-bottom: 1px solid var(--ion-color-light-shade);
+    padding-top: 0px;
+
+    ion-list-header {
+      font-size: 22px;
+      font-weight: 600;
+
+      min-height: 20px;
+      // custom styles
+      width: 100%;
+      height: 150px;
+      margin-bottom: 15px;
+    }
+  }
+
+  ion-list#links-list {
+    ion-list-header {
+      font-size: 16px;
+
+      margin-bottom: 18px;
+
+      color: $title;
+
+      min-height: 26px;
+    }
+  }
+
+  ion-item {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border-radius: 4px;
+
+    &.selected {
+      --background: rgba(var(--ion-color-primary-rgb), 0.14);
+      ion-icon {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    &.selected {
+      background-color: rgba($primary-rgb, 0.14) !important;
+    }
+
+    ion-icon {
+      color: $secundary !important;
+    }
+
+    ion-label {
+      font-weight: 500;
+      color: $primary !important;
+    }
+  }
+}
+
+ion-menu.ios {
+  ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-list {
+    padding: 20px 0 0 0;
+  }
+
+  ion-note {
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  ion-item {
+    --padding-start: 0;
+    --min-height: 50px;
+
+    &.selected {
+      ion-icon {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    ion-icon {
+      font-size: 24px;
+      color: #73849a;
+    }
+  }
+
+  ion-list#labels-list ion-list-header {
+    margin-bottom: 8px;
+  }
+
+  ion-list-header, ion-note {
+    padding-left: 2px;
+  }
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+
+  color: var(--ion-color-medium-shade);
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}
+
+ion-app {
+  padding-bottom: 100px;
+}
+
+#main-content {
+  margin-bottom: 50px;
+}
+
+ion-footer {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}

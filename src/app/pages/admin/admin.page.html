@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col col-4>
+          <h4>ICB Louvor</h4>
+        </ion-col>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="../../../assets/img/rod.jpg">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <h3>Montar Escala do Louvor</h3>
+    <form>
+      <ion-item>
+        <ion-label>Ministro</ion-label>
+        <ion-select name="ministro" [(ngModel)]="ministro" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let m of b.vocal" [value]="m">{{ m }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Violão</ion-label>
+        <ion-select name="violao" [(ngModel)]="violao" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let v of b.violao" [value]="v">{{ v }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Back 1</ion-label>
+        <ion-select name="back1" [(ngModel)]="back1" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let b1 of b.vocal" [value]="b1">{{ b1 }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Back 2</ion-label>
+        <ion-select name="back2" [(ngModel)]="back2" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let b2 of b.vocal" [value]="b2">{{ b2 }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Teclado</ion-label>
+        <ion-select name="teclado" [(ngModel)]="teclado" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let t of b.teclado" [value]="t">{{ t }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Guitarra</ion-label>
+        <ion-select name="guitarra" [(ngModel)]="guitarra" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let g of b.guitarra" [value]="g">{{ g }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Baixo</ion-label>
+        <ion-select name="baixo" [(ngModel)]="baixo" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let bass of b.baixo" [value]="bass">{{ bass }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bateria</ion-label>
+        <ion-select name="bateria" [(ngModel)]="bateria" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let bat of b.bateria" [value]="bat">{{ bat }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mesa de Som</ion-label>
+        <ion-select name="mesa" [(ngModel)]="mesa" checked>
+          <div *ngFor="let b of banda">
+            <ion-select-option *ngFor="let ms of b.mesa" [value]="ms">{{ ms }}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <ion-button color="primary" (click)="escala()">Enviar</ion-button>
+    </form>
+    
+  </div>
+</ion-content>

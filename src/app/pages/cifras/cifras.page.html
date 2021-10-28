@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col col-4>
+          <h4>ICB Louvor</h4>
+        </ion-col>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="../../../assets/img/rod.jpg">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <img src="../../../assets/img/cifras.jpg">
+
+    <ion-list id="musicasDomingo" *ngFor="let c of culto">
+      <ion-list-header>
+        <ion-label><ion-icon name="musical-note"></ion-icon> Músicas do dia {{ c.data }}</ion-label>
+      </ion-list-header>
+      <li *ngFor="let m of c.musicas; let i = index; let impar = odd; let par = even;" [ngClass]="{odd: par, even: impar}">
+        <p>
+          {{ m }}
+        </p>
+      </li>
+    </ion-list>
+
+    <ion-list id="todasMusicas">
+      <ion-list-header>
+        <ion-label><ion-icon name="musical-note"></ion-icon> Demais Músicas</ion-label>
+      </ion-list-header>
+      <li *ngFor="let m of musicas; let i = index; let impar = odd; let par = even;" [ngClass]="{odd: par, even: impar}">
+        <p>
+          {{ m }}
+        </p>
+      </li>
+    </ion-list>
+  </div>
+</ion-content>

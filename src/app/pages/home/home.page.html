@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col col-4>
+          <h4>ICB Louvor</h4>
+        </ion-col>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="../../../assets/img/rod.jpg">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <img src="../../../assets/img/bem-vindo.png">
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <img src="../../../assets/img/escala.jpg" (click)="goToUrl('/escala')">
+    <br>
+    <img src="../../../assets/img/cifras.jpg" (click)="goToUrl('/cifras')">
+    <br>
+    <img src="../../../assets/img/estudos.jpg" (click)="goToUrl('/estudos')">
+  </div>
+</ion-content>

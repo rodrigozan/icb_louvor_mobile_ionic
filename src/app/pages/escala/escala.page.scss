@@ -1,0 +1,28 @@
+@import '../pages';
+
+#container {
+    #dia {
+        .bg {
+            background-color: #999999;
+            p {
+                color: #ffffff; 
+            }
+        }
+        ion-col {
+            @include titlePage(#999999, #ffffff);
+        }
+    }
+    .escalas {
+        ion-col {
+            border-top: solid 1px #999999;
+            border-right: solid 1px #999999;
+        }
+        .instrumento {
+            background: #999999;
+            color: #ffffff;
+            border-top: solid 1px #ffffff;
+            border-right: solid 1px #ffffff;
+        }
+    }
+    
+}

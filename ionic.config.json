@@ -1,0 +1,7 @@
+{
+  "name": "icb_cifras",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

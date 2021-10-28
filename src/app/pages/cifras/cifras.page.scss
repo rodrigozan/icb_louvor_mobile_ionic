@@ -1,0 +1,13 @@
+@import '../pages';
+
+#musicasDomingo {
+    ion-list-header {
+        @include titlePage(#ffffff, #333333);
+    }
+}
+
+#todasMusicas {
+    ion-list-header {
+        @include titlePage(#ffffff, $primary);
+    }
+}
